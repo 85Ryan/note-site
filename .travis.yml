@@ -9,7 +9,3 @@ cache:
   apt: true
   directories:
     - node_modules
-
-script:
-  - npm run dep
-  - npm run alg
