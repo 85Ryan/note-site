@@ -2,12 +2,12 @@
 title: 使用 Git Hooks 将 Hexo 站点自动部署到云服务器
 date: 2019-09-10 14:51:57
 url: auto-deploy-hexo-site-to-cloud-servers-using-git-hooks
-categories: 
-- hexo
+categories:
+  - hexo
 tags:
-- hexo
-- git hook
-- 阿里云
+  - hexo
+  - git hook
+  - 阿里云
 ---
 
 [Hexo](https://hexo.io/) 是一个快速、简洁且高效的静态博客框架，一般情况下，我们可以很方便地将 Hexo 站点部署到 [Github Pages](https://pages.github.com) 等托管平台，如果你有一台 VPS 服务器，可按照下面的方法将站点自动部署到自己的服务器中。
@@ -40,7 +40,7 @@ deploy:
 	repo: user@xx.xxx.xx.xxx:/home/user/site.git
 	# 如果使用了自定义ssh端口:
 	repo: ssh://user@xx.xxx.xx.xxx:port/home/user/site.git
-	
+
 # user: 登录服务器的用户，需要进行必要的授权
 # xx.xxx.xx.xxx: 服务器 IP 地址
 # /home/user/site.git: 上一步中创建的 Git 仓库路径
@@ -80,7 +80,9 @@ cp -rf ${TMP_GIT_CLONE}/* ${PUBLIC_WWW}
 
 上述脚本的目的为先将文件拉到临时目录 `/tmp/site`，然后再将所有文件拷贝到站点目录 `/www/site`。
 
-> 这里需要注意相关文件的权限问题！
+{% note warn 注意%}
+这里需要注意相关文件的权限问题！
+{% endnote %}
 
 ## 运行
 
@@ -96,4 +98,3 @@ hexo clean && hexo d
 ...
 INFO  Deploy done: git
 ```
-

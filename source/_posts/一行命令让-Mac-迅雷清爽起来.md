@@ -3,11 +3,11 @@ title: 一行命令让 Mac 迅雷清爽起来
 date: 2019-09-18 21:18:58
 url: make-xunlei-for-mac-refreshing
 categories:
-- utilities
+  - utilities
 tags:
-- 工具
-- 迅雷
-- 命令行
+  - 工具
+  - 迅雷
+  - 命令行
 ---
 
 ![一行命令让 Mac 迅雷清爽起来](/assets/images/utilities/make-xunlei-for-mac-refreshing.png)
@@ -44,5 +44,6 @@ sudo chmod a+x viptask.xlplugin             #会员任务
 
 当然，可以根据自己的实际需要选择要使用的插件！
 
-> NOTICE：
-> 这种方法，每次软件更新后都需要重新设置！
+{% note tip Notice%}
+这种方法，每次软件更新后都需要重新设置！
+{% endnote %}
