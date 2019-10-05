@@ -1,0 +1,18 @@
+<div id="content-wrap">
+  <div class="wrapper">
+    <div id="content-inner" class="inner">
+      <div id="content-main">
+        <section class="archives-wrap">
+          <div class="tag-title-wrap">
+            <h1 class="tag-title"><%- page.tag %></h1>
+          </div>
+          <div class="archives">
+            <% page.posts.each(function(post){ %>
+            <%- partial('_partial/archive-post', {post: post, index: true, cache: true}) %>
+            <% }); %>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>

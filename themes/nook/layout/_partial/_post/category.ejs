@@ -1,0 +1,12 @@
+<% if (is_post() && post.categories && post.categories.length){ %>
+<span class="<%= class_name %>">
+  <%- svg_icon('category') %>
+  <%- list_categories(post.categories, {
+    show_count: false,
+    class: 'post-category',
+    style: 'none',
+    separator: '&raquo;',
+    depth: 2
+  }) %>
+</span>
+<% } %>

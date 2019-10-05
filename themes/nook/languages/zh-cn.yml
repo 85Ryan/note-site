@@ -1,0 +1,38 @@
+index:
+  nothing: Nothing
+  nothing_info: Oops! It looks like nothing was found at this location</br>Come back a little later
+  404_info: Oops! It looks like nothing was found at this location.
+
+about:
+  hello: Hello
+
+header:
+  about: 关于
+  archive: 归档
+  search: 搜索
+  tag: 标签
+
+menu:
+  about: About
+  archive: Archives
+  search: Search
+  javascript: JavaScript
+  hexo: Hexo
+  swift: Swift
+  utilities: Utilities
+
+footer:
+  wechat-follow: 扫码关注我的微信
+
+page:
+  more: 阅读全文
+
+post:
+  share-wechat: 分享文章到微信
+  share-wechat-hint: 使用微信扫码将网页分享到微信
+  newer: 前一篇
+  older: 后一篇
+
+algolia:
+  input_placeholder: 搜索文章...
+  hits_empty: 未发现与 「 {{query}} 」相关的内容

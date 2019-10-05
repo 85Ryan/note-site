@@ -1,0 +1,29 @@
+<div id="content-wrap">
+  <div class="wrapper">
+    <div id="content-inner" class="inner">
+      <div id="content-main">
+        <% var last; %>
+        <% page.posts.each(function(post, i) { %>
+        <% var year = post.date.year(); %>
+        <% if( last != year ) { %>
+        <% if( last != null ) { %>
+      </div>
+      </section>
+      <% } %>
+      <% last = year; %>
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="<%- url_for(config.archive_dir + '/' + year) %>" class="archive-year"><%= year %></a>
+        </div>
+        <div class="archives">
+          <% } %>
+          <%- partial('_partial/archive-post', {post: post, even: i % 2 == 0}) %>
+          <% }) %>
+          <% if (page.posts.length){ %>
+        </div>
+      </section>
+      <% } %>
+    </div>
+  </div>
+</div>
+</div>

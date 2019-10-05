@@ -1,0 +1,12 @@
+<div class="post-share-links">
+  <span class="wechat-links post-share-wechat">
+    <%- svg_icon('wechat') %>
+    <div class="wechat-qrcode-wrap">
+      <div class="wechat-qrcode-title"><%- __('post.share-wechat') %></div>
+      <img class="wechat-qrcode-img" src="<%- qrcode(post.permalink) %>" alt="wechat qrcode">
+      <div class="wechat-qrcode-hint"><%- __('post.share-wechat-hint') %></div>
+    </div>
+  </span>
+  <%- weibo_share_link('post-share-weibo') %>
+  <%- twitter_share_link('post-share-twitter') %>
+</div>

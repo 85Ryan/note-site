@@ -1,0 +1,33 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <!-- <title><% if(page.title) { %><%- page.title %> - <% } %><%- config.title %></title> -->
+  <title><%- head_title('-') %></title>
+  <% if(config.description && (page.layout == 'index')){ %>
+  <meta name="description" content="<%- config.description %>" />
+  <% } %>
+  <% if(config.keywords && (page.layout == 'index')){ %>
+  <meta name="keywords" content="<%- config.keywords %>" />
+  <% } %>
+  <% if(config.author){ %>
+  <meta name="author" content="<%- config.author %>" />
+  <% } %>
+  <link rel="apple-touch-icon" href="<%- url_for('logo.png') %>" />
+  <meta name="msapplication-TileColor" content="#2b2b2b" />
+  <meta name="msapplication-TileImage" content="<%- url_for('mstile-logo.png') %>" />
+  <!-- Icon -->
+  <%- favicon_tag("favicon.ico") %>
+  <!-- feed -->
+  <%- feed_tag('atom.xml') %>
+  <!-- build:js -->
+  <%- js('js/pace.min') %>
+  <!-- endbuild -->
+  <!-- build:css -->
+  <%- css('css/nook') %>
+  <!-- endbuild -->
+  <!-- algolia config -->
+  <%- algolia_search_config() %>
+  <meta property="algolia:label" data-input_placeholder="<%= __('algolia.input_placeholder') %>"
+    data-hits_empty="<%= __('algolia.hits_empty') %>">
+</head>

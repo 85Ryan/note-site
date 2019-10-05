@@ -1,0 +1,210 @@
+h1, h2, h3, h4, h5, h6
+  clear both
+  line-height 1.6
+  margin 0 0 0.75em
+  padding 0.75em 0 0
+  position relative
+  &:first-child
+    padding-top 0
+
+h1
+  font-size 24px
+  font-weight 600
+
+h2
+  font-size 20px
+  font-weight 500
+
+h3
+  font-size 18px
+  font-weight 500
+
+h4
+  font-size 16px
+  font-weight 500
+
+h5, h6
+  font-size 15px
+  font-weight 500
+
+p
+  margin 0 0 1.5em
+  padding 0
+  text-align justify
+
+dfn, cite, em, i
+  font-style italic
+
+blockquote
+  color #666
+  font-style italic
+  padding 0 0 0 2rem
+  overflow hidden
+  text-align justify
+  position relative
+  margin 1.2rem 0
+
+blockquote cite
+  display block
+  font-style normal
+  font-weight 600
+  margin-top 0.5em
+
+blockquote p
+  margin-bottom 0
+
+blockquote::before
+  content ''
+  position absolute
+  left 0
+  height 100%
+  width 0.25rem
+  background color-body
+
+address
+  margin 0 0 1.5em
+
+pre
+  background color-body
+  font-family font-mono
+  font-size 13px
+  line-height 1.4
+  width 100%
+  max-width 100%
+  overflow auto
+  tab-size 4
+  border-radius 2px
+
+code, kbd, tt, var
+  font-family font-mono
+  font-size 13px
+  margin 0 1px
+  padding 0 1px
+  border-radius 1px
+  background-color color-body
+
+abbr, acronym
+  border-bottom 1px dotted color-border
+  cursor help
+
+mark, ins
+  background color-body
+  border-radius 2px
+  margin 0 1px
+  text-decoration none
+
+big
+  font-size 125%
+
+:focus
+  outline none
+
+hr
+  background-color color-border
+  border 0
+  height 1px
+  margin-bottom 1.5em
+
+// Lists
+ul, ol
+  margin 5px 0
+  padding-left 18px
+  padding-bottom 12px
+  vertical-align baseline
+  text-align justify
+
+dl
+  text-align justify
+
+ul
+  list-style circle
+
+ol
+  list-style decimal
+
+li > ul, li > ol
+  margin-bottom 0
+  margin-left 1.5em
+  padding-left 0.625em
+
+li > p
+  margin-bottom 0
+
+dt
+  font-weight 500
+
+dd
+  margin 0 1.25em 1.25em
+
+// Table
+table
+  font-size 13px
+  overflow auto
+  width 100%
+  border-collapse collapse
+  word-wrap normal
+  word-break normal
+  margin 0 0 1.5em
+
+caption
+  font-size 12px
+  margin 10px 0
+  caption-side bottom
+
+th
+  font-weight 500
+  padding 0.4em
+  text-align left
+  &:first-child
+    padding-left 0
+  &:last-child
+    padding-right 0
+
+thead th
+  border-top 1.5px solid color-border
+  border-bottom 1.5px solid color-border
+  padding-bottom 0.5em
+
+td
+  padding 0.4em
+  &:first-child
+    padding-left 0
+  &:last-child
+    padding-right 0
+
+tr:last-child
+  border-bottom 1px solid color-border
+
+.highlight
+  table, th, tr
+    border none
+
+// Links
+a
+  color color-default
+  text-decoration none
+  border-bottom 1px dotted color-border
+  transition border-bottom 0.1s ease-out
+  &:hover
+    border-bottom 2px solid color-default
+
+// figure
+figure
+  margin-block-start 24px
+  margin-block-end 24px
+  margin-inline-start 0
+  margin-inline-end 0
+  width 100%
+  .image-caption
+    margin-block-start 24px
+    margin-block-end 24px
+    text-align center
+    position relative
+    font-style italic
+    font-size 12px
+    color #666
+    line-height 1
+    background-color color-body
+    padding 5px 0 5px 28px
+    border-left 4px solid color-default
+    border-radius 2px

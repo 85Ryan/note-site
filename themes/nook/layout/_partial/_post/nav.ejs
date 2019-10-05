@@ -1,0 +1,14 @@
+<% if( post.prev || post.next ) { %>
+<nav id="post-nav">
+  <% if( post.prev ) { %>
+  <a href="<%- url_for(post.prev.path) %>" id="post-nav-newer" class="post-nav-link-wrap">
+    <strong class="post-nav-caption">&laquo; <%= __('post.newer') %></strong>
+  </a>
+  <% } %>
+  <% if( post.next ) { %>
+  <a href="<%- url_for(post.next.path) %>" id="post-nav-older" class="post-nav-link-wrap">
+    <strong class="post-nav-caption"><%= __('post.older') %> &raquo;</strong>
+  </a>
+  <% } %>
+</nav>
+<% } %>

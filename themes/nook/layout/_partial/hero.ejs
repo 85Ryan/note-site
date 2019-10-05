@@ -1,0 +1,12 @@
+<header id="hero" class="wrapper">
+  <div id="hero-inner" class="inner">
+    <div class="page-logo"><%- svg_icon(page.category) %></div>
+    <div class="page-description">
+      <h1 class="page-title"><%- __('menu.' + page.category) %></h1>
+      <% if(site.data.cate_desc) { %>
+      <p class="page-info"><%- site.data.cate_desc[page.category] %></p>
+      <% } %>
+    </div>
+    <div class="hero-arrow"><%- svg_icon('arrow') %></div>
+  </div>
+</header>

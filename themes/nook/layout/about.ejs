@@ -1,0 +1,38 @@
+<header id="hero" class="wrapper">
+  <div id="hero-inner" class="inner">
+    <div class="page-logo author-avatar">
+      <% if(theme.author_mail) { %>
+      <img src="<%- gravatar(theme.author_mail, 200) %>">
+      <% } else { %>
+      <img class="wechat-qrcode-img" src="<%- url_for('/default-avatar.svg') %>">
+      <% } %>
+    </div>
+    <div class="page-description">
+      <h1 class="author-title"><%- __('about.hello') %></h1>
+      <% if(theme.author) { %><p class="author-name">I am <%- theme.author %></p><% } %>
+      <% if(theme.author_description) { %><p class="author-info"> <%- theme.author_description %></p><% } %>
+    </div>
+    <div class="hero-arrow"><%- svg_icon('arrow') %></div>
+  </div>
+</header>
+<div id="content-wrap">
+  <div class="wrapper">
+    <div id="content-inner" class="inner">
+      <div id="content-main" class="about-content">
+        <% if(page.content) { %>
+        <%- page.content %>
+        <% } else { %>
+        <div class="about-nothing-content">
+          <div class="about-nothing-logo">
+            <%- svg_icon('err') %>
+          </div>
+          <div class="about-nothing-description">
+            <h1 class="about-nothing-title"><%- __('index.nothing') %></h1>
+            <p class="about-nothing-info"><%- __('index.nothing_info') %></p>
+          </div>
+        </div>
+        <% } %>
+      </div>
+    </div>
+  </div>
+</div>

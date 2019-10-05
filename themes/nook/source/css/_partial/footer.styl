@@ -1,0 +1,44 @@
+#footer
+  clearfix()
+  position relative
+  padding 40px 0
+  border-top 1px solid color-body
+  .footer-container
+    max-width content-width
+    margin 0 auto
+    text-align left
+    .footer-links
+      float left
+      .icon
+        width 24px
+        height 24px
+        margin-right 15px
+        fill color-border
+      .weibo-links:hover .icon
+        fill #d52b2a
+      .twitter-links:hover .icon
+        fill #1da1f2
+      .github-links:hover .icon
+        fill #24292e
+      .wechat-links
+        &:hover .icon
+          fill #02df6d
+        .wechat-qrcode-wrap
+          .wechat-qrcode-img
+            height 115px
+            margin 10px auto
+            width 115px
+      .rss-links
+        .icon
+          width 20px
+          height 20px
+        &:hover .icon
+          fill color-default
+      a
+        border none
+    .footer-copyright
+      text-transform uppercase
+      font-size 12px
+      text-align right
+      line-height 1.6
+      float right

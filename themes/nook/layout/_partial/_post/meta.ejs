@@ -1,0 +1,13 @@
+<span class="<%= class_name %>">
+  <% if (!post.title || post.link){ %>
+  <a href="<%- url_for(post.path) %>">
+    <time datetime="<%= date_xml(post.date) %>" itemprop="datePublished">
+      <%= post.date.format(config.date_format) %>
+    </time>
+  </a>
+  <% } else { %>
+  <time datetime="<%= date_xml(post.date) %>" itemprop="datePublished">
+    <%= post.date.format(config.date_format) %>
+  </time>
+  <% } %>
+</span>

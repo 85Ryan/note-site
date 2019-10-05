@@ -1,0 +1,60 @@
+#index-content-wrap
+  background-color #fff
+
+.index-content-main
+  margin auto
+  display block
+  padding-top 8vh
+  padding-bottom 8vh
+  display flex
+  flex-direction column
+  align-items center
+  justify-content center
+  text-align center
+  &:nth-child(odd)
+    background color-body
+  @media mq-normal
+    height 50vh
+    min-height 480px
+    position relative
+  .wrapper
+    max-width content-width
+  .index-category-logo
+    margin auto
+    position static
+    text-align center
+    width 100%
+    .icon
+      width 80px
+      height 80px
+      fill color-default
+  .index-category-description
+    margin 15px 10px 0
+    padding-bottom 30px
+    .index-category-title
+      font-size 48px
+      font-weight 600
+      text-transform capitalize
+      margin 0
+    .index-category-info
+      font-size 16px
+      text-align center
+      font-weight 400
+  .index-category-link
+    text-transform uppercase
+    color color-body
+    background color-default
+    border 1px solid color-default
+    padding 8px 15px
+    font-weight 600
+    font-size 16px
+    &:hover
+      background none
+      color color-default
+
+.no-content .index-category-description .index-category-info
+  text-transform uppercase
+  font-weight 500
+
+#err-icon .st0
+  fill #FFD040

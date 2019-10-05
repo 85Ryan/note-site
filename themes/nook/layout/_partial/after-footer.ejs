@@ -1,0 +1,13 @@
+<!-- jQuery -->
+<%- js('js/jquery-3.4.1.min') %>
+<!-- build:js build/js/main.js -->
+<%- js('js/main') %>
+<!-- endbuild -->
+
+<!-- build:js build/js/algolia -->
+<script src="https://cdn.jsdelivr.net/npm/algoliasearch@3.33.0/dist/algoliasearchLite.min.js"
+  crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@3.6.0/dist/instantsearch.production.min.js"
+  crossorigin="anonymous"></script>
+<%- js('js/algolia') %>
+<!-- endbuild -->

@@ -1,0 +1,14 @@
+<input type="checkbox" name="menu-checkbox" id="menu-checkbox">
+<label for="menu-checkbox" id="menu-label">
+  <span></span><span></span><span></span>
+</label>
+<div id="mobile-nav-container" class="mobile-nav-container">
+  <nav class="mobile-main-nav">
+    <% for ( var i in site.data.menu) { %>
+      <a href="<%- url_for(site.data.menu[i]) %>" class="mobile-nav-link"><%- __('menu.' + i) %></a>
+    <% } %>
+    <a href="/about" class="mobile-nav-link"><%- __('menu.about') %></a>
+    <a href="/<%- config.archive_dir %>" class="mobile-nav-link"><%- __('menu.archive') %></a>
+    <a href="#" class="mobile-nav-link popup-trigger"><%- __('menu.search') %></a>
+  </nav>
+</div>

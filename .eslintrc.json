@@ -3,6 +3,7 @@
     "browser": true,
     "es6": true
   },
+  "root": true,
   "extends": ["eslint:recommended", "hexo"],
   "globals": {
     "Atomics": "readonly",
@@ -12,5 +13,11 @@
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
-  "rules": {}
+  "rules": {
+    "strict": "off",
+    "wrap-iife": ["error", "inside"],
+    "operator-linebreak": ["error", "after"],
+    "node/no-unpublished-require": "off",
+    "node/no-unsupported-features": "off"
+  }
 }

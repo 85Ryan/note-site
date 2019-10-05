@@ -1,0 +1,13 @@
+<% if(theme.weibo.id) { %><a href="https://weibo.com/<%- theme.weibo.id %>" class="weibo-links" target="_blank"><%- svg_icon('weibo') %></a><% } %>
+<% if(theme.twitter.id) { %><a href="https://twitter.com/<%- theme.twitter.id %>" class="twitter-links" target="_blank"><%- svg_icon('twitter') %></a><% } %>
+<% if(theme.github.id) { %><a href="https://github.com/<%- theme.github.id %>" class="github-links" target="_blank"><%- svg_icon('github') %></a><% } %>
+<% if(theme.wechat.qrcode) { %>
+<span class="wechat-links">
+    <%- svg_icon('wechat') %>
+    <div class="wechat-qrcode-wrap">
+        <div class="wechat-qrcode-title"><%- __('footer.wechat-follow') %></div>
+        <img class="wechat-qrcode-img" src="<%- url_for(theme.wechat.qrcode) %>" alt="wechat qrcode">
+    </div>
+</span>
+<% } %>
+<a href="/atom.xml" class="rss-links" target="_blank"><%- svg_icon('rss') %></a>

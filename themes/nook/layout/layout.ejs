@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="<%= config.language %>">
+<%- partial('_partial/head',{cache: true}) %>
+<body class="<%- body_class(); %>">
+  <!-- icons.svg -->
+  <%- partial('_partial/icons.svg') %>
+  <div class="container">
+    <%- partial('_partial/header',{cache: true}) %>
+    <%- body %>
+    <%- partial('_partial/footer',{cache: true}) %>
+  </div>
+  <%- partial('_partial/after-footer',{cache: true}) %>
+</body>
+</html>
