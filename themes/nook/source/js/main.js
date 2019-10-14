@@ -1,5 +1,7 @@
 /* global jQuery */
 (function($) {
+  'use strict';
+
   // Highlight current nav
   $('#main-nav .main-nav-list-link').each(function() {
     if ($('.page-title').length > 0) {

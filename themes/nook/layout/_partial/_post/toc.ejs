@@ -1,0 +1,7 @@
+<aside id="article-toc" role="navigation">
+  <div id="article-toc-inner">
+    <strong class="article-toc-title"><%- svg_icon('menu') %><%- __('post.contents') %></strong>
+    <%- toc(post.content, {list_number: false, max_depth: 3}) %>
+    <a href="#" id="article-toc-top"><%- __('post.back_to_top') %></a>
+  </div>
+</aside>

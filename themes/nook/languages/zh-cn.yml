@@ -32,6 +32,8 @@ post:
   share-wechat-hint: 使用微信扫码将网页分享到微信
   newer: 前一篇
   older: 后一篇
+  contents: 文章目录
+  back_to_top: 返回顶部
 
 algolia:
   input_placeholder: 搜索文章...

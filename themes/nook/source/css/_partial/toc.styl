@@ -1,0 +1,68 @@
+#article-toc
+  font-size 12px
+  padding-left 4em
+  display none
+  width 200px
+  float right
+  margin-right -200px
+  opacity 0.8
+  @media mq-large
+    display block
+
+#article-toc-inner
+  @extend .inner
+  border-left 1px solid color-border
+  line-height 1
+  overflow-x hidden
+  overflow-y auto
+  width 200px
+  position fixed
+  top 180px
+  .fixed &
+    top 50px
+  .toc
+    padding 0
+    padding-top 1em
+    margin 0
+    .toc-child
+      padding 0
+      margin 0
+      padding-left 1em
+
+.toc-item
+  line-height 2.2
+
+.toc-link
+  color color-gray
+  display block
+  position relative
+  width 100%
+  text-overflow ellipsis
+  overflow hidden
+  white-space nowrap
+  border none
+  &:hover
+    border none
+    color color-default
+
+.article-toc-title
+  line-height 1
+  font-weight 600
+  color color-gray
+  .icon
+    width 12px
+    height 12px
+    vertical-align middle
+    fill color-gray
+    margin-right 8px
+
+#article-toc-top
+  color color-gray
+  margin-top 2em
+  display block
+  border none
+  line-height 1
+  font-weight 600
+  &:hover
+    border none
+    color color-default

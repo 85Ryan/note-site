@@ -1,7 +1,7 @@
 // Page Colors
 color-swift = #FF492B
 color-hexo = #0E83CD
-color-javascript = #F7DF1E
+color-javascript = #F5E20A
 color-node = #539E43
 color-python = #3775A9
 color-python-0 = #FFD040
@@ -13,7 +13,9 @@ color-git = #F14E32
 .swift
   a:hover, #main-nav .current, #main-nav .current:hover, #content-main .article .post-header .post-title a:hover, .post-tag-list .post-tag-list-item .post-tag-list-link:hover, figcaption
     border-color color-swift
-  .page-logo .icon, .index-category-logo .icon, #hero .hero-arrow .icon
+  #post-nav .post-nav-link-wrap:hover, .article-toc-title, #article-toc-top:hover, .toc-link:hover
+    color color-swift
+  .page-logo .icon, .index-category-logo .icon, #hero .hero-arrow .icon, .article-toc-title .icon
     fill color-swift
   .index-category-link:hover
     color #fff
@@ -25,7 +27,9 @@ color-git = #F14E32
 .hexo
   a:hover, #main-nav .current, #main-nav .current:hover, #content-main .article .post-header .post-title a:hover, .post-tag-list .post-tag-list-item .post-tag-list-link:hover, figcaption
     border-color color-hexo
-  .page-logo .icon, .index-category-logo .icon, #hero .hero-arrow .icon
+  #post-nav .post-nav-link-wrap:hover, .article-toc-title, #article-toc-top:hover, .toc-link:hover
+    color color-hexo
+  .page-logo .icon, .index-category-logo .icon, #hero .hero-arrow .icon, .article-toc-title .icon
     fill color-hexo
   .index-category-link:hover
     color #fff
@@ -37,10 +41,12 @@ color-git = #F14E32
 .javascript
   a:hover, #main-nav .current, #main-nav .current:hover, #content-main .article .post-header .post-title a:hover, .post-tag-list .post-tag-list-item .post-tag-list-link:hover, figcaption
     border-color color-javascript
-  .page-logo .icon, .index-category-logo .icon, #hero .hero-arrow .icon
+  #post-nav .post-nav-link-wrap:hover, .article-toc-title, #article-toc-top:hover, .toc-link:hover
+    color color-default
+  .page-logo .icon, .index-category-logo .icon, #hero .hero-arrow .icon, .article-toc-title .icon
     fill color-javascript
   .index-category-link:hover
-    color #fff
+    color color-default
     background-color color-javascript
     transition background 0.1s ease-out
   .pace .pace-progress
@@ -52,7 +58,9 @@ color-git = #F14E32
 .node
   a:hover, #main-nav .current, #main-nav .current:hover, #content-main .article .post-header .post-title a:hover, .post-tag-list .post-tag-list-item .post-tag-list-link:hover, figcaption
     border-color color-node
-  .page-logo .icon, .index-category-logo .icon, #hero .hero-arrow .icon
+  #post-nav .post-nav-link-wrap:hover, .article-toc-title, #article-toc-top:hover, .toc-link:hover
+    color color-node
+  .page-logo .icon, .index-category-logo .icon, #hero .hero-arrow .icon, .article-toc-title .icon
     fill color-node
   .index-category-link:hover
     color #fff
@@ -67,7 +75,9 @@ color-git = #F14E32
 .python
   a:hover, #main-nav .current, #main-nav .current:hover, #content-main .article .post-header .post-title a:hover, .post-tag-list .post-tag-list-item .post-tag-list-link:hover, figcaption
     border-color color-python
-  .page-logo .icon, .index-category-logo .icon, #hero .hero-arrow .icon
+  #post-nav .post-nav-link-wrap:hover, .article-toc-title, #article-toc-top:hover, .toc-link:hover
+    color color-python
+  .page-logo .icon, .index-category-logo .icon, #hero .hero-arrow .icon, .article-toc-title .icon
     fill color-python
   .index-category-link:hover
     color #fff
@@ -82,7 +92,9 @@ color-git = #F14E32
 .java
   a:hover, #main-nav .current, #main-nav .current:hover, #content-main .article .post-header .post-title a:hover, .post-tag-list .post-tag-list-item .post-tag-list-link:hover, figcaption
     border-color color-java
-  .page-logo .icon, .index-category-logo .icon, #hero .hero-arrow .icon
+  #post-nav .post-nav-link-wrap:hover, .article-toc-title, #article-toc-top:hover, .toc-link:hover
+    color color-java
+  .page-logo .icon, .index-category-logo .icon, #hero .hero-arrow .icon, .article-toc-title .icon
     fill color-java
   .index-category-link:hover
     color #fff
@@ -97,7 +109,9 @@ color-git = #F14E32
 .utilities
   a:hover, #main-nav .current, #main-nav .current:hover, #content-main .article .post-header .post-title a:hover, .post-tag-list .post-tag-list-item .post-tag-list-link:hover, figcaption
     border-color color-utilities
-  .page-logo .icon, .index-category-logo .icon, #hero .hero-arrow .icon
+  #post-nav .post-nav-link-wrap:hover, .article-toc-title, #article-toc-top:hover, .toc-link:hover
+    color color-utilities
+  .page-logo .icon, .index-category-logo .icon, #hero .hero-arrow .icon, .article-toc-title .icon
     fill color-utilities
   .index-category-link:hover
     color #fff
@@ -112,7 +126,9 @@ color-git = #F14E32
 .git
   a:hover, #main-nav .current, #main-nav .current:hover, #content-main .article .post-header .post-title a:hover, .post-tag-list .post-tag-list-item .post-tag-list-link:hover, figcaption
     border-color color-git
-  .page-logo .icon, .index-category-logo .icon, #hero .hero-arrow .icon
+  #post-nav .post-nav-link-wrap:hover, .article-toc-title, #article-toc-top:hover, .toc-link:hover
+    color color-git
+  .page-logo .icon, .index-category-logo .icon, #hero .hero-arrow .icon, .article-toc-title .icon
     fill color-git
   .index-category-link:hover
     color #fff

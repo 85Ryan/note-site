@@ -32,6 +32,8 @@ post:
   share-wechat-hint: Share to WeChat by scan Qrcode
   newer: Newer
   older: Older
+  contents: Contents
+  back_to_top: Back to Top
 
 algolia:
   input_placeholder: Seacrh Posts...
