@@ -27,8 +27,9 @@
       description: site.data.cate_desc[page.category]
     }) %>
   <% } %>
-  <% if(is_post()) { %>
+  <% if(is_post() || (is_page() && page.layout != 'index')) { %>
     <%- open_graph({
+      image: post_cover(page),
       twitter_id: theme.twitter.id,
     }) %>
   <% } %>

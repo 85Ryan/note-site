@@ -2,6 +2,7 @@
 title: 使用 Git Hooks 将 Hexo 站点自动部署到云服务器
 date: 2019-09-10 14:51:57
 url: auto-deploy-hexo-site-to-cloud-servers-using-git-hooks
+cover:
 categories:
   - hexo
 tags:

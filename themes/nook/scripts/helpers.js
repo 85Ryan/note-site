@@ -1,3 +1,4 @@
+/* eslint-disable no-useless-escape */
 /* global hexo */
 
 'usr strict';
@@ -87,4 +88,17 @@ hexo.extend.helper.register('weibo_share_link', function(className) {
   result += icon + '</a>';
 
   return result;
+});
+
+// Post Cover
+hexo.extend.helper.register('post_cover', function(post) {
+  var url = post.cover || '';
+  if (!url) {
+    var imgPattern = /\<img\s.*?\s?src\s*=\s*['|"]?([^\s'"]+).*?\>/gi;
+    var result = imgPattern.exec(post.content);
+    if (result && result.length > 1) {
+      url = result[1];
+    }
+  }
+  return url;
 });
