@@ -11,7 +11,8 @@
     width 100%
     padding 40px 0
     .post-header
-      padding-bottom 18px
+      position relative
+      border-bottom 1px solid color-border
       .post-title
         font-size 24px
         text-transform uppercase
@@ -19,6 +20,9 @@
         margin-bottom 0
         font-weight 600
         line-height 1.6
+        padding-right 30px
+        @media mq-large
+          padding-right 0
         a
           color color-default
           text-decoration none
@@ -27,10 +31,17 @@
           &:hover
             border-bottom 3px solid color-gray
             transition border-bottom 0.1s ease-out
-      .post-meta, .post-category
+      .post-meta
         color color-gray
-        a
-          font-size 14px
+        font-size 12px
+        text-transform uppercase
+      .post-category
+        font-size 12px
+        margin-left 15px
+        position relative
+        text-transform uppercase
+        .post-category-link
+          margin-left 10px
           line-height 1.6
           color color-gray
           text-decoration none
@@ -38,12 +49,6 @@
           &:hover
             border-bottom 1px solid color-gray
             transition border-bottom 0.1s ease-out
-      .post-category
-        margin-left 15px
-        text-transform capitalize
-        position relative
-        .post-category-link
-          margin-left 10px
         .icon
           position absolute
           top 0
@@ -53,6 +58,7 @@
           fill color-gray
     .post-content
       clearfix()
+      padding-top 18px
       .more-link
         text-transform uppercase
         font-weight 600
@@ -222,7 +228,7 @@
       bottom -12px
       left 68px
     .wechat-qrcode-title, .wechat-qrcode-hint
-      color #999
+      color color-gray
       font-size 12px
     .wechat-qrcode-title
       background-color color-body

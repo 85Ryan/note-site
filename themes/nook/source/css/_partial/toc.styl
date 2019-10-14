@@ -1,11 +1,9 @@
 #article-toc
-  font-size 12px
-  padding-left 4em
+  padding-left 80px
   display none
   width 200px
   float right
   margin-right -200px
-  opacity 0.8
   @media mq-large
     display block
 
@@ -20,14 +18,16 @@
   top 180px
   .fixed &
     top 50px
-  .toc
+
+.toc
+  font-size 12px
+  padding 0
+  padding-top 1em
+  margin 0
+  .toc-child
     padding 0
-    padding-top 1em
     margin 0
-    .toc-child
-      padding 0
-      margin 0
-      padding-left 1em
+    padding-left 1em
 
 .toc-item
   line-height 2.2
@@ -57,6 +57,7 @@
     margin-right 8px
 
 #article-toc-top
+  font-size 13px
   color color-gray
   margin-top 2em
   display block
@@ -66,3 +67,60 @@
   &:hover
     border none
     color color-default
+
+// Mobile Article Toc
+#mb-article-toc
+  position absolute
+  top 0
+  right 0
+  z-index 100
+  #mb-article-toc-inner
+    position relative
+    @media mq-large
+      display none
+    &:hover .icon
+      fill color-default
+    &:hover .toc
+      visibility visible
+      opacity 1
+    .toc
+      position absolute
+      visibility hidden
+      background-color #fff
+      transition 0.2s opacity ease, visibility 0.2s
+      padding 20px
+      width 200px
+      max-height 300px
+      border 1px solid color-border
+      border-radius 5px
+      top 40px
+      right -20px
+      box-shadow 0 5px 10px rgba(0, 0, 0, 0.15)
+      &:before
+        border solid 10px transparent
+        border-bottom-color color-border
+        content ''
+        position absolute
+        top -20px
+        left 160px
+      &:after
+        border solid 10px transparent
+        border-bottom-color #fff
+        content ''
+        position absolute
+        top -19px
+        left 160px
+
+.article-toc-button
+  width 30px
+  height 30px
+  border none
+  background none
+  float right
+  cursor pointer
+  .icon
+    width 30px
+    height 30px
+    padding 6px
+    vertical-align middle
+    fill color-gray

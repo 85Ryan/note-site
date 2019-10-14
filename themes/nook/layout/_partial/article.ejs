@@ -4,6 +4,9 @@
     <%- partial('_post/title', {class_name: 'post-title', cache: true}) %>
     <%- partial('_post/meta', {class_name: 'post-meta', cache: true}) %>
     <%- partial('_post/category', {class_name: 'post-category', cache: true}) %>
+    <% if( !index ) { %>
+      <%- partial('_post/mobile-toc') %>
+    <% } %>
   </header>
   <div class="post-content" itemprop="articleBody">
     <% if( post.excerpt && index ) { %>
