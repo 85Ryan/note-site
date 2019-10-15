@@ -1,6 +1,9 @@
 <aside id="mb-article-toc" role="navigation">
   <div id="mb-article-toc-inner">
     <button class="article-toc-button"><%- svg_icon('menu') %></button>
-    <%- toc(post.content, {list_number: false, max_depth: 3}) %>
+    <div class="toc-wrap">
+      <%- toc(post.content, {list_number: false, max_depth: 3}) %>
+      <span class="arrow-1"></span><span class="arrow-2"></span>
+    </div>
   </div>
 </aside>

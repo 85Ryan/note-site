@@ -80,36 +80,37 @@
       display none
     &:hover .icon
       fill color-default
-    &:hover .toc
+    &:hover .toc-wrap
       visibility visible
       opacity 1
-    .toc
-      position absolute
+    .toc-wrap
       visibility hidden
-      background-color #fff
       transition 0.2s opacity ease, visibility 0.2s
-      padding 20px
-      width 200px
-      max-height 300px
-      border 1px solid color-border
-      border-radius 5px
-      top 40px
-      right -20px
-      box-shadow 0 5px 10px rgba(0, 0, 0, 0.15)
-      &:before
+      .toc
+        position absolute
+        background-color #fff
+        overflow-x hidden
+        overflow-y scroll
+        padding 20px
+        width 200px
+        max-height 300px
+        border 1px solid color-border
+        border-radius 5px
+        top 40px
+        right -20px
+        box-shadow 0 5px 10px rgba(0, 0, 0, 0.15)
+      .arrow-1
         border solid 10px transparent
         border-bottom-color color-border
-        content ''
         position absolute
-        top -20px
-        left 160px
-      &:after
+        top 21px
+        left 10px
+      .arrow-2
         border solid 10px transparent
         border-bottom-color #fff
-        content ''
         position absolute
-        top -19px
-        left 160px
+        top 22px
+        left 10px
 
 .article-toc-button
   width 30px
