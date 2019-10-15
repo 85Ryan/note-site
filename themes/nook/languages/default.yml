@@ -34,6 +34,7 @@ post:
   older: Older
   contents: Contents
   back_to_top: Back to Top
+  is_helpful: Was this post helpful?
 
 algolia:
   input_placeholder: Seacrh Posts...

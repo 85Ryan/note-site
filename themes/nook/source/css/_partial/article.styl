@@ -131,19 +131,27 @@
 
 .post-footer
   clearfix()
-  padding 20px 0
+  padding 24px 0
   line-height 1.6em
-  border-bottom 1px solid color-body
+  border-bottom 1px solid color-border
   a
     font-weight 600
 
+#post-tag-wrap
+  width 100%
+  overflow hidden
+
 .post-tag-list
+  display inline-flex
+  flex-flow row nowrap
   padding-bottom 0
   padding-left 0
   .post-tag-list-item
-    float left
+    font-size 12px
     list-style none
-    margin-right 20px
+    white-space nowrap
+    flex-wrap nowrap
+    margin-right 15px
     .post-tag-list-link
       color color-gray
       padding-bottom 3px
@@ -157,38 +165,130 @@
         content '#'
         margin-right 3px
 
-#post-nav
-  clearfix()
-  position relative
-  margin-top 20px
-  .post-nav-link-wrap
-    font-weight 600
-    color color-gray
-    box-sizing border-box
-    border none
-    &:hover
-      color color-default
-  #post-nav-older
-    float right
-  #post-nav-newer
-    float left
-  .post-nav-caption
-    text-transform uppercase
-    line-height 1em
+#post-social-icons
+  display flex
+  border-top 1px solid color-border
+  margin-top 12px
+  padding-top 24px
+  align-items center
+  flex-flow row nowrap
 
 .post-share-links
-  clearfix()
-  float right
-  @media mq-mobile
-    width 100%
-    margin-top 30px
-  .icon
+  flex-grow 1
+  flex-shrink 1
+  flex-basis 0%
+  margin-top 0
+  padding-top 0
+  .post-share-links-inner
+    flex-grow 1
+    flex-shrink 1
+    flex-basis auto
+    display flex
+    margin-top 0
+    padding-top 0
+    align-items center
+    .post-share-wechat, .post-share-weibo, .post-share-twitter
+      width 24px
+      height 24px
+      display flex
+      margin-top 0
+      padding-top 0
+      margin-right 16px
+      .icon
+        width 24px
+        height 24px
+        fill color-border
+        vertical-align middle
+    a
+      border none
+
+#post-reactions-inner
+  display flex
+  margin-top 0
+  padding-top 0
+  align-items center
+  flex-flow row nowrap
+  justify-content flex-end
+
+.post-reactions-title
+  flex-grow 1
+  flex-shrink 1
+  flex-basis 0%
+  padding-top 0
+  margin-top 0
+  display block
+  padding-right 10px
+  color color-gray
+  font-size 12px
+  font-weight 600
+  line-height 1.2
+  letter-spacing 1.2px
+  text-transform uppercase
+
+.post-reactions-button
+  margin-top 0
+  display flex
+  padding-top 0
+  button
     width 24px
+    cursor pointer
     height 24px
-    margin-right 15px
-    fill color-border
-  a
+    margin-top 0
+    margin-right 8px
+    display inline-flex
+    padding-top 0
+    align-items center
     border none
+    border-radius 50%
+    justify-content center
+    background-color color-border
+    transition-duration 250ms, 250ms, 250ms
+    transition-timing-function ease, ease, ease
+    transition-delay initial, initial, initial
+    transition-property background-color, color, tranform
+    .icon
+      width 24px
+      height 24px
+      vertical-align middle
+      fill color-gray
+  #reaction-good
+    margin-right 0
+
+#reaction-bad.active
+  background-color rgb(255, 70, 66)
+  transform scale(1.25)
+  .icon
+    fill #fff
+    transform scale(1.25)
+
+#reaction-notbad.active
+  background-color rgb(255, 209, 57)
+  transform scale(1.25)
+  .icon
+    fill #fff
+    transform scale(1.25)
+
+#reaction-good.active
+  background-color rgb(38, 203, 124)
+  transform scale(1.25)
+  .icon
+    fill #fff
+    transform scale(1.25)
+
+#reaction-bad:hover
+  background-color rgb(255, 70, 66)
+  .icon
+    fill #fff
+
+#reaction-notbad:hover
+  background-color rgb(255, 209, 57)
+  .icon
+    fill #fff
+
+#reaction-good:hover
+  background-color rgb(38, 203, 124)
+  .icon
+    fill #fff
 
 .wechat-links
   position relative
@@ -244,14 +344,30 @@
       margin 0 auto
       width 110px
 
-.post-share-weibo:hover
-  .icon
-    fill #d52b2a
+.post-share-links .post-share-links-inner .post-share-weibo:hover .icon
+  fill #d52b2a
 
-.post-share-twitter:hover
-  .icon
-    fill #1da1f2
+.post-share-links .post-share-links-inner .post-share-twitter:hover .icon
+  fill #1da1f2
 
-.post-share-wechat:hover
-  .icon
-    fill #02df6d
+.post-share-links .post-share-links-inner .post-share-wechat:hover .icon
+  fill #02df6d
+
+#post-nav
+  clearfix()
+  position relative
+  margin-top 20px
+  .post-nav-link-wrap
+    font-weight 600
+    color color-gray
+    box-sizing border-box
+    border none
+    &:hover
+      color color-default
+  #post-nav-older
+    float right
+  #post-nav-newer
+    float left
+  .post-nav-caption
+    text-transform uppercase
+    line-height 1em

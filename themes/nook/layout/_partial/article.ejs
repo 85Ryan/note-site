@@ -5,26 +5,29 @@
     <%- partial('_post/meta', {class_name: 'post-meta', cache: true}) %>
     <%- partial('_post/category', {class_name: 'post-category', cache: true}) %>
     <% if( !index ) { %>
-      <%- partial('_post/mobile-toc') %>
+    <%- partial('_post/mobile-toc') %>
     <% } %>
   </header>
   <div class="post-content" itemprop="articleBody">
     <% if( post.excerpt && index ) { %>
     <%- post.excerpt %>
-      <a class="more-link" href="<%- url_for(post.path) %>#more"><%- __('page.more') %></a>
+    <a class="more-link" href="<%- url_for(post.path) %>#more"><%- __('page.more') %></a>
     <% } else { %>
-      <%- post.content %>
+    <%- post.content %>
     <% } %>
   </div>
   <div id="post-separator" class="post-separator"></div>
   <% if( is_post() ) { %>
   <footer class="post-footer">
     <%- partial('_post/tag', {cache: true}) %>
-    <%- partial('_post/share-links', {cache: true}) %>
+    <div id="post-social-icons">
+      <%- partial('_post/share-links', {cache: true}) %>
+      <%- partial('_post/reaction', {cache: true}) %>
+    </div>
   </footer>
   <% } %>
   <% if( !index ) { %>
-    <%- partial('_post/nav') %>
-    <%- partial('_post/toc') %>
+  <%- partial('_post/nav', {cache: true}) %>
+  <%- partial('_post/toc', {cache: true}) %>
   <% } %>
 </article>

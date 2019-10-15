@@ -1,7 +1,9 @@
 <% if (post.tags && post.tags.length){ %>
+<div id="post-tag-wrap">
   <%- list_tags(post.tags, {
     show_count: false,
-    amount: 5,
+    amount: 8,
     class: 'post-tag'
   }) %>
+</div>
 <% } %>
