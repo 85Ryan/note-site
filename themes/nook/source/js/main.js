@@ -40,4 +40,10 @@
       }
     }
   });
+
+  $('li.check-list-item').each(function() {
+    $(this)
+      .parent()
+      .addClass('check-list');
+  });
 })(jQuery);

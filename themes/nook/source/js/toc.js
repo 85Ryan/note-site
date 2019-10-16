@@ -4,6 +4,7 @@
   var header = document.getElementById('header');
   var headerHeight = header.clientHeight;
   var toc = document.getElementById('article-toc');
+  var mbToc = document.getElementById('mb-article-toc');
   var tocTop = document.getElementById('article-toc-top');
 
   if (!toc) return;
@@ -35,5 +36,6 @@
   var tocList = document.getElementsByClassName('toc');
   if (!tocList.length > 0) {
     toc.style.display = 'none';
+    mbToc.style.display = 'none';
   }
 })();
