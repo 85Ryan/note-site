@@ -6,6 +6,7 @@
     "version": "4.0.0"
   },
   "scripts": {
+    "ser": "hexo server --draft",
     "dep": "hexo clean && hexo d",
     "alg": "hexo algolia --flush"
   },

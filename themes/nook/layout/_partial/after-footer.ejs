@@ -1,8 +1,8 @@
 <!-- jQuery -->
 <%- js('js/jquery-3.4.1.min') %>
+<%- js('js/jquery.scrollTo.min') %>
 <!-- build:js -->
 <%- js('js/main') %>
-<%- js('js/toc') %>
 <!-- endbuild -->
 
 <!-- build:js build/js/algolia -->
@@ -15,7 +15,7 @@
 
 <% if(is_post()) { %>
   <!-- build:js Reactions -->
-  <script src="https://cdn.jsdelivr.net/npm/js-cookie@beta/dist/js.cookie.min.js"></script>
+  <%- js('js/js.cookie.min') %>
   <%- js('js/reaction') %>
   <!-- endbuild -->
 <% } %>

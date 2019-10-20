@@ -1,5 +1,5 @@
 #article-toc
-  padding-left 80px
+  padding-left 60px
   display none
   width 200px
   float right
@@ -9,7 +9,6 @@
 
 #article-toc-inner
   @extend .inner
-  border-left 1px solid color-border
   line-height 1
   overflow-x hidden
   overflow-y auto
@@ -17,17 +16,22 @@
   position fixed
   top 180px
   .fixed &
+    position fixed
     top 50px
+    bottom 0
 
 .toc
+  border-left 1px solid color-border
   font-size 12px
   padding 0
   padding-top 1em
+  padding-left 20px
   margin 0
   .toc-child
     padding 0
     margin 0
     padding-left 1em
+    display none
 
 .toc-item
   list-style none
@@ -46,10 +50,15 @@
     border none
     color color-default
 
+.current
+  font-weight 600
+
 .article-toc-title
+  border-left 1px solid color-border
   line-height 1
   font-weight 600
   color color-gray
+  padding-left 20px
   .icon
     width 12px
     height 12px
@@ -112,6 +121,8 @@
         position absolute
         top 22px
         left 10px
+      .toc-child
+        display block
 
 .article-toc-button
   width 30px

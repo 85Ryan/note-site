@@ -6,8 +6,8 @@
   var notbadButton = document.getElementById('reaction-notbad');
   var goodButton = document.getElementById('reaction-good');
 
-  var isHelpful = Cookies.get('is_helpful');
   var url = document.location.pathname;
+  var isHelpful = Cookies.get('is_helpful', { path: url });
 
   if (!badButton || !notbadButton || !goodButton) return;
 
