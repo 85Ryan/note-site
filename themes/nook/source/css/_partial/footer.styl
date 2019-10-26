@@ -1,58 +1,60 @@
 #footer
   clearfix()
-  position relative
-  padding 40px 0
-  border-top 1px solid color-body
-  .footer-container
-    max-width content-width
-    margin 0 auto
-    text-align left
-    .footer-links
-      float left
-      @media mq-mobile
-        width 100%
-        text-align center
-      .icon
-        width 24px
-        height 24px
-        margin-right 15px
-        fill color-gray
-        opacity 0.5
-        &:hover
-          opacity 1
-      .weibo-links:hover .icon
-        fill #d52b2a
-      .twitter-links:hover .icon
-        fill #1da1f2
-      .github-links:hover .icon
-        fill #24292e
-      .wechat-links
-        &:hover .icon
-          fill #02df6d
-        .wechat-qrcode-wrap
-          .wechat-qrcode-img
-            height 115px
-            margin 10px auto
-            width 115px
-      .rss-links
-        .icon
-          width 20px
-          height 20px
-        &:hover .icon
-          fill color-default
-      a
-        border none
-    .footer-copyright
-      color color-gray
-      text-transform uppercase
-      font-size 12px
-      text-align right
-      line-height 1.6
-      float right
-      a
-        color color-gray
-        &:hover
-          border-color color-gray
-      @media mq-mobile
-        width 100%
-        text-align center
+  padding width-large 0
+  a
+    border none
+
+.footer-container
+  width 100%
+  display flex
+  flex-flow row nowrap
+  justify-content space-between
+  align-items center
+  @media mq-mobile
+    flex-flow column nowrap
+    justify-content center
+
+.footer-links
+  flex 0 50%
+  display flex
+  flex-flow row nowrap
+  align-items center
+  .icon
+    width icon-large
+    height icon-large
+    margin-right 15px
+    fill color-gray
+    opacity 0.5
+    &:hover
+      opacity 1
+
+.footer-copyright
+  flex 0 50%
+  text-align right
+  color color-gray
+  text-transform uppercase
+  font-size font-small
+  line-height 1.6
+  @media mq-mobile
+    text-align center
+  a
+    color color-gray
+    position relative
+    @extend title-link
+    &:before
+      background color-gray
+
+.github-links:hover .icon
+  fill #24292e
+
+.footer-links .wechat-qrcode-wrap .wechat-qrcode-img
+  height 115px
+  margin 10px auto
+  width 115px
+
+.rss-links
+  .icon
+    width icon-normal
+    height icon-normal
+  &:hover .icon
+    fill color-default

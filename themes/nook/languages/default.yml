@@ -29,6 +29,8 @@ page:
   more: Read More
 
 post:
+  meta_posted: Posted on
+  meta_cat: ' | in'
   share-wechat: Share to WeChat
   share-wechat-hint: Share to WeChat by scan Qrcode
   newer: Newer

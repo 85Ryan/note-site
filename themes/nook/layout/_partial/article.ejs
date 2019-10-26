@@ -5,15 +5,15 @@
     <%- partial('_post/meta', {class_name: 'post-meta', cache: true}) %>
     <%- partial('_post/category', {class_name: 'post-category', cache: true}) %>
     <% if( !index ) { %>
-    <%- partial('_post/mobile-toc') %>
+    <%- partial('_post/mobile-toc', {cache: true}) %>
     <% } %>
   </header>
   <div class="post-content" itemprop="articleBody">
     <% if( post.excerpt && index ) { %>
-    <%- post.excerpt %>
-    <a class="more-link" href="<%- url_for(post.path) %>#more"><%- __('page.more') %></a>
+      <%- post.excerpt %>
+      <a class="more-link" href="<%- url_for(post.path) %>#more"><%- __('page.more') %></a>
     <% } else { %>
-    <%- post.content %>
+      <%- post.content %>
     <% } %>
   </div>
   <div id="post-separator" class="post-separator"></div>

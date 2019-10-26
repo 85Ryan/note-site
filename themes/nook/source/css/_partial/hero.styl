@@ -1,55 +1,59 @@
+hero-icon-size = 150px
+
 #hero
-  margin auto
-  display block
-  padding-top 8vh
-  padding-bottom 8vh
+  flex 1 auto
+  padding-top 10vh
+  padding-bottom 10vh
   display flex
-  flex-direction column
+  flex-flow column nowrap
   align-items center
   justify-content center
   text-align center
   @media mq-normal
+    flex-basis 100vh
     height 100vh
     padding-bottom 24vh
     position relative
-  .page-logo
-    margin auto
-    position static
-    text-align center
-    width 100%
-    .icon
-      width 150px
-      height 150px
-      @media mq-mobile
-        width 100px
-        height 100px
-  .page-description
-    margin 28px 20px 0
-    .page-title
-      font-size 72px
-      font-weight 600
-      text-transform capitalize
-      @media mq-mobile
-        font-size 60px
-    .page-info
-      font-size 16px
-      text-align center
-      font-weight 400
-  .hero-arrow
-    display none
-    opacity 1
-    position absolute
-    bottom 12vh
-    left calc(50% - 18px)
-    animation arrow 4s infinite ease-in-out
-    transform-origin 0 0 -25px
-    @media mq-height
-      display block
+
+.page-logo
+  margin 0 auto
+  position static
+  width 100%
+  .icon
+    width hero-icon-size
+    height hero-icon-size
     @media mq-mobile
-      display none
-    .icon
-      width 36px
-      height 36px
+      width 100px
+      height 100px
+
+.page-description
+  margin width-large width-normal 0
+  .page-title
+    font-size 72px
+    font-weight 700
+    text-transform capitalize
+    margin 0
+    padding 0
+    @media mq-mobile
+      font-size 60px
+  .page-info
+    font-size font-big
+    font-weight 400
+    text-align center
+
+.hero-arrow
+  display none
+  opacity 1
+  position absolute
+  bottom 12vh
+  left calc(50% - 18px)
+  animation arrow 4s infinite ease-in-out
+  transform-origin 0 0 -25px
+  @media mq-normal
+    display block
+  .icon
+    width 36px
+    height 36px
 
 @keyframes arrow
   0%

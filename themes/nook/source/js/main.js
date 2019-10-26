@@ -3,7 +3,7 @@
   'use strict';
 
   // Highlight current nav
-  $('#main-nav .main-nav-list-link').each(function() {
+  $('#main-nav .main-nav-link').each(function() {
     if ($('.page-title').length > 0) {
       if (
         $(this)
@@ -119,6 +119,7 @@
       }
     } else {
       currentLink.removeClass('current');
+      $('#article-toc ol ol').hide();
     }
   });
 })(jQuery);

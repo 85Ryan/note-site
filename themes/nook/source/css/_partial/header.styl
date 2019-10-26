@@ -1,9 +1,9 @@
-header-padding-normal = 10px
-header-padding-max = 30px
-logo-size = 50px
+logo-size = 30px
+header-height = 50px
 
 #header
-  margin-top 32px
+  margin-top logo-size
+  margin-bottom logo-size
   position relative
   @media print
     display none
@@ -12,13 +12,19 @@ logo-size = 50px
 
 #header-inner
   display flex
+  height header-height
   flex-flow row nowrap
-  align-self center
+  justify-content flex-start
+  align-items center
   @media mq-mobile
     justify-content center
 
 #logo-wrap
   flex 0 logo-size
+  margin 0
+  padding 0
+  height logo-size
+  line-height logo-size
 
 #logo
   hide-text()
@@ -27,61 +33,74 @@ logo-size = 50px
   .icon
     width logo-size
     height logo-size
-    padding header-padding-normal
 
 #main-nav
-  width 100%
+  height header-height
+  flex 1 auto
+  padding-left width-normal
+  z-index 999
   display none
-  flex 1px auto
-  padding-left 20px
-  position relative
-  z-index 9999
   @media mq-normal
     display block
-  ul
-    margin 0
-    padding 0
-    li
-      float left
-      list-style none
-      .main-nav-list-link
-        color color-default
-        text-decoration none
-        text-transform uppercase
-        letter-spacing 1.5px
-        line-height logo-size
-        transition 0.25s
-        font-weight 600
-        font-size 16px
-        display inline-block
-        margin 0 10px
-        &:hover
-          border-bottom 3px solid color-default
-          transition border-bottom 0.1s ease-out
-      .current, .current:hover
-        border-bottom 3px solid color-default
-  .sub-nav
-    position absolute
-    right 0
-    top 15px
-    li
-      flex 0 logo-size
-      .sub-nav-link
-        border none
-        width logo-size
-        height logo-size
-        margin 0
-        margin-left 15px
-        &:hover
-          border-bottom none
-      .icon
-        width 20px
-        height 20px
-        fill color-gray
-        opacity 0.5
-        &:hover
-          fill color-default
-          opacity 1
+
+.main-nav-list
+  margin 0
+  padding 0
+  height header-height
+  display flex
+  flex-flow row nowrap
+  justify-content flex-start
+  align-items center
+
+.main-nav-list-item
+  list-style none
+  height logo-size
+
+.main-nav-link
+  color color-default
+  text-transform uppercase
+  letter-spacing 1.5px
+  line-height logo-size
+  font-weight 600
+  font-size 16px
+  display inline-block
+  margin-left width-normal
+  position relative
+  @extend title-link
+
+.current:before, .current:hover:before
+  transform scaleX(1)
+  visibility visible
+
+#sub-nav
+  flex 0 90px
+  display none
+  @media mq-normal
+    display block
+
+.sub-nav-list
+  display flex
+  flex-flow row nowrap
+  width 90px
+  height header-height
+  margin 0
+  padding 0
+  list-style none
+  justify-content space-between
+  align-items center
+
+.sub-nav-list-item
+  width icon-normal
+  height icon-normal
+  flex 0 icon-normal
+
+.sub-nav-link
+  .icon
+    fill color-gray
+    opacity 0.5
+    &:hover
+      fill color-default
+      opacity 1
 
 // Mobile Nav
 #menu-checkbox:checked ~ .mobile-nav-container
@@ -150,8 +169,6 @@ logo-size = 50px
       color #fff
       margin 20px 0
       padding 0 2px 5px 2px
-      width -webkit-fit-content
-      width -moz-fit-content
       width fit-content
       font-size 18px
       border-bottom 0

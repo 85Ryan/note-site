@@ -1,6 +1,6 @@
-<% if (is_post() && post.categories && post.categories.length){ %>
+<% if ((is_post() && post.categories && post.categories.length) || is_archive() || is_tag()){ %>
 <span class="<%= class_name %>">
-  <%- svg_icon('category') %>
+  <%- __('post.meta_cat') %>
   <%- list_categories(post.categories, {
     show_count: false,
     class: 'post-category',

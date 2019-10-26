@@ -29,6 +29,8 @@ page:
   more: 阅读全文
 
 post:
+  meta_posted: Posted on
+  meta_cat: ' | in'
   share-wechat: 分享文章到微信
   share-wechat-hint: 使用微信扫码将网页分享到微信
   newer: 前一篇

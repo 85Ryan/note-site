@@ -12,7 +12,6 @@ button, input[type='reset'], input[type='button'], input[type='submit'], &::-moz
 html, body
   @media screen
     height 100%
-    // overflow hidden
 
 body
   background-color color-body
@@ -23,7 +22,7 @@ body
   -webkit-font-smoothing antialiased
   -moz-osx-font-smoothing grayscale
   overflow-x hidden
-  line-height 2.2
+  line-height line-height
 
 // Media
 img, video
@@ -35,8 +34,17 @@ img, video
 embed, iframe, object
   max-width 100%
 
+#container
+  display flex
+  min-height 100vh
+  flex-flow column nowrap
+
+#content-wrap, #index-content-wrap
+  flex auto
+
 .wrapper
   clearfix()
+  width 100%
   @media screen
     max-width max-width
     margin 0 auto
@@ -44,4 +52,26 @@ embed, iframe, object
 .inner
   clearfix()
   @media screen
-    padding 0 gutter-width
+    padding 0 width-normal
+
+.icon
+  width icon-normal
+  height icon-normal
+  fill color-default
+
+title-link
+  position relative
+  &:before
+    background color-default
+    bottom -3px
+    content ''
+    height 2px
+    left 0
+    position absolute
+    transform scaleX(0)
+    visibility hidden
+    width 100%
+    transition 0.2s 0s ease-in-out
+  &:hover:before
+    transform scaleX(1)
+    visibility visible

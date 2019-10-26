@@ -1,76 +1,76 @@
 .archives-wrap
-  margin-bottom 30px
-  .archive-year-wrap
-    margin-bottom 15px
-    .archive-year
-      position relative
-      font-size 28px
-      font-weight 600
-      color color-default
-      text-decoration none
-      border-bottom none
-      &:hover
-        border-bottom 3px solid color-default
-        transition border-bottom 0.1s ease-out
-      &:before
-        content '#'
-        position absolute
-        right calc(100% + 10px)
-        bottom 0.2em
-        color color-gray
-        font-size 1.25rem
-        font-weight 800
-        font-variant 'small-caps'
-        font-family font-sans
-        border 0
-        border-radius 0
-        left auto
-        font none
-        padding 0
-        vertical-align baseline
-        line-height 20px
-      @media mq-mobile
-        &:before
-          content ''
-        &:after
-          content '#'
-          position absolute
-          right -20px
-          bottom 0.2em
-          color color-gray
-          font-size 1.25rem
-          font-weight 800
-          font-variant 'small-caps'
-          font-family font-sans
-          border 0
-          border-radius 0
-          font none
-          padding 0
-          vertical-align baseline
-          line-height 20px
-  .archives
-    margin-left 30px
-    .archive-post
-      margin-bottom 30px
-      border-bottom 1px solid color-body
-      .archive-post-title
-        text-transform uppercase
-        font-size 16px
-        line-height 1
-        a
-          text-decoration none
-          border-bottom none
-          &:hover
-            border-bottom 2px solid color-default
-            transition border-bottom 0.1s ease-out
-      .archive-post-meta
-        font-size 12px
-        color color-gray
-        line-height 1
-        a
-          color color-gray
-          text-decoration none
-          border-bottom none
-          &:hover
-            border-bottom 1px solid color-gray
-            transition border-bottom 0.1s ease-out
+  margin-bottom width-large
+
+.archive-year-wrap
+  margin-bottom width-normal
+
+.archive-year
+  position relative
+  font-size 28px
+  font-weight 600
+  color color-default
+  text-decoration none
+  border-bottom none
+  &:hover
+    border-bottom none
+  &:before
+    content '#'
+    position absolute
+    right calc(100% + 10px)
+    bottom 0.2em
+    color color-gray
+    font-size 1.25rem
+    font-weight 800
+    font-variant 'small-caps'
+    font-family font-sans
+    border 0
+    border-radius 0
+    left auto
+    font none
+    padding 0
+    vertical-align baseline
+    line-height 20px
+  &:after
+    background color-default
+    bottom -3px
+    content ''
+    height 2px
+    left 0
+    position absolute
+    transform scaleX(0)
+    visibility hidden
+    width 100%
+    transition 0.2s 0s ease-in-out
+  &:hover:after
+    transform scaleX(1)
+    visibility visible
+  @media mq-mobile
+    &:before
+      content ''
+
+.archives
+  padding-left width-normal
+  border-left 1px solid color-border
+
+.archive-post
+  margin-bottom width-large
+
+.archive-post-title
+  text-transform uppercase
+  font-size font-big
+  margin-bottom 0
+  line-height 1
+  position relative
+  &:after
+    content ''
+    position absolute
+    height 8px
+    width 8px
+    border-radius 50%
+    background-color color-border
+    top 4px
+    left -24px
+  a
+    text-decoration none
+    border-bottom none
+    @extend title-link

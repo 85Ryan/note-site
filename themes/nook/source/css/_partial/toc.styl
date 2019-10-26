@@ -1,9 +1,10 @@
 #article-toc
-  padding-left 60px
+  position absolute
+  text-transform uppercase
   display none
   width 200px
-  float right
-  margin-right -200px
+  right -200px
+  padding-left 40px
   @media mq-large
     display block
 
@@ -21,16 +22,13 @@
     bottom 0
 
 .toc
-  border-left 1px solid color-border
-  font-size 12px
+  font-size font-small
   padding 0
-  padding-top 1em
-  padding-left 20px
   margin 0
+  margin-top 12px
   .toc-child
     padding 0
     margin 0
-    padding-left 1em
     display none
 
 .toc-item
@@ -38,27 +36,37 @@
   line-height 2.2
 
 .toc-link
+  border-left 1px solid color-border
+  padding-left width-normal
   color color-gray
+  opacity 0.75
   display block
   position relative
   width 100%
   text-overflow ellipsis
   overflow hidden
   white-space nowrap
-  border none
+  border-bottom none
   &:hover
-    border none
+    border-bottom none
     color color-default
+
+.toc-child .toc-link
+  padding-left width-large
 
 .current
   font-weight 600
+  &.toc-link
+    background-color rgba(245, 247, 249, 0.5)
+    border-left 3px solid color-gray
 
 .article-toc-title
   border-left 1px solid color-border
   line-height 1
   font-weight 600
   color color-gray
-  padding-left 20px
+  padding-left width-normal
+  padding-bottom 12px
   .icon
     width 12px
     height 12px
@@ -71,11 +79,11 @@
   color color-gray
   margin-top 2em
   display block
-  border none
+  border-bottom none
   line-height 1
   font-weight 600
   &:hover
-    border none
+    border-bottom none
     color color-default
 
 // Mobile Article Toc
@@ -97,6 +105,7 @@
       visibility hidden
       transition 0.2s opacity ease, visibility 0.2s
       .toc
+        margin-top 0
         position absolute
         background-color #fff
         overflow-x hidden
@@ -107,7 +116,7 @@
         border 1px solid color-border
         border-radius 5px
         top 40px
-        right -20px
+        right -10px
         box-shadow 0 5px 10px rgba(0, 0, 0, 0.15)
       .arrow-1
         border solid 10px transparent
@@ -123,6 +132,11 @@
         left 10px
       .toc-child
         display block
+        .toc-link
+          padding-left width-small
+      .toc-link
+        border none
+        padding-left 0
 
 .article-toc-button
   width 30px

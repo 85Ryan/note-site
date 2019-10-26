@@ -41,14 +41,14 @@ dfn, cite, em, i
   font-style italic
 
 blockquote
-  color #666
+  color color-gray
   font-size 13px
-  padding 0 0 0 30px
+  padding 0 0 0 width-large
   overflow hidden
   text-align justify
   position relative
-  margin 32px 0
-  border-left 5px solid color-body
+  margin width-large 0
+  border-left 5px solid color-border
 
 blockquote cite
   display block
@@ -66,10 +66,10 @@ blockquote p&:last-child
   position relative
   .icon
     position absolute
-    top 20px
-    left 20px
-    width 30px
-    height 30px
+    top width-normal
+    left width-normal
+    width width-large
+    height width-large
     vertical-align middle
   &.info
     border-left-color note-info
@@ -90,8 +90,8 @@ blockquote p&:last-child
   .note-title
     display block
     font-size 18px
-    line-height 20px
-    margin-bottom 10px
+    line-height width-normal
+    margin-bottom width-small
     font-weight bold
 
 address
@@ -141,8 +141,8 @@ hr
 // Lists
 ul, ol
   margin 5px 0
-  padding-left 18px
-  padding-bottom 12px
+  padding-left width-normal
+  padding-bottom width-small
   vertical-align baseline
   text-align justify
 
@@ -175,7 +175,7 @@ dd
   input
     height 1em
     width 1em
-    margin-right 10px
+    margin-right width-small
 
 // Table
 table
@@ -213,6 +213,12 @@ td
   &:last-child
     padding-right 0
 
+thead tr
+  background-color color-body
+
+tbody tr:nth-child(even)
+  background-color color-body
+
 tr:last-child
   border-bottom 1px solid color-border
 
@@ -224,26 +230,26 @@ tr:last-child
 a
   color color-default
   text-decoration none
-  border-bottom 1px dotted color-border
+  border-bottom 1px dotted color-gray
   transition border-bottom 0.1s ease-out
   &:hover
     border-bottom 2px solid color-default
 
-// figure
+// Image Figure
 figure
-  margin-block-start 24px
-  margin-block-end 24px
+  margin-block-start width-normal
+  margin-block-end width-normal
   margin-inline-start 0
   margin-inline-end 0
   width 100%
   .image-caption
-    margin-block-start 24px
-    margin-block-end 24px
+    margin-block-start width-normal
+    margin-block-end width-normal
     text-align center
     position relative
     font-size 12px
-    color #666
+    color color-gray
     line-height 1
     background-color color-body
-    padding 5px 0 5px 28px
-    border-left 4px solid color-default
+    padding 5px 0 5px width-large
+    border-left 4px solid color-gray

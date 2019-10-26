@@ -1,30 +1,32 @@
 <%- partial('_partial/mobile-nav', {cache: true}) %>
 <header id="header" class="wrapper">
   <div id="header-inner" class="inner">
-    <h1 class="logo-wrap">
+    <h1 id="logo-wrap">
       <a href="<%- url_for('') %>" id="logo"><%- svg_icon('logo') %></a>
     </h1>
     <nav id="main-nav" class="main-nav">
       <ul class="main-nav-list">
         <% for (var i in site.data.menu) { %>
         <li class="main-nav-list-item">
-          <a href="<%- url_for(site.data.menu[i]) %>" class="main-nav-list-link"><%- __('menu.' + i) %></a>
+          <a href="<%- url_for(site.data.menu[i]) %>" class="main-nav-link"><%- __('menu.' + i) %></a>
         </li>
         <% } %>
       </ul>
-      <ul class="sub-nav">
-        <li class="sub-nav-list">
+    </nav>
+    <nav id="sub-nav" class="sub-nav">
+      <ul class="sub-nav-list">
+        <li class="sub-nav-list-item">
           <a href="/about" class="sub-nav-link" title="<%- __('header.about') %>">
             <%- svg_icon('about') %>
           </a>
         </li>
-        <li class="sub-nav-list">
+        <li class="sub-nav-list-item">
           <a href="/<%- config.archive_dir %>" class="sub-nav-link" title="<%- __('header.archive') %>">
             <%- svg_icon('archive') %>
           </a>
         </li>
         <% if(config.algolia) { %>
-        <li class="sub-nav-list">
+        <li class="sub-nav-list-item">
           <a href="#" class="sub-nav-link popup-trigger" title="<%- __('header.search') %>">
             <%- svg_icon('search') %>
           </a>

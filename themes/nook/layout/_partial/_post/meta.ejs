@@ -1,6 +1,7 @@
 <span class="<%= class_name %>">
+  <%- __('post.meta_posted') %>
   <% if (!post.title || post.link){ %>
-  <a href="<%- url_for(post.path) %>">
+  <a href="<%- url_for(post.path) %>" class="post-time-link">
     <time datetime="<%= date_xml(post.date) %>" itemprop="datePublished">
       <%= post.date.format(config.date_format) %>
     </time>
