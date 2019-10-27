@@ -48,17 +48,19 @@
   font-size font-big
   margin-bottom 0
   line-height 1
-  position relative
-  &:after
-    content ''
-    position absolute
-    height 8px
-    width 8px
-    border-radius 50%
-    background-color color-border
-    top 4px
-    left -24px
   a
     text-decoration none
     border-bottom none
     @extend title-link
+    &:after
+      content ''
+      position absolute
+      height 8px
+      width 8px
+      border-radius 50%
+      background-color color-border
+      transition background 0.2s ease-in-out
+      top 4px
+      left -25px
+    &:hover:after
+      background-color color-gray
