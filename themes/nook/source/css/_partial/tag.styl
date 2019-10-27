@@ -3,7 +3,7 @@
   .tag-title
     position relative
     text-transform uppercase
-    &::before
+    &:before
       content '#'
       position absolute
       right calc(100% + 10px)
@@ -17,4 +17,8 @@
       font none
       padding 0
       vertical-align baseline
-      line-height 20px
+      line-height width-normal
+    @media mq-mobile
+      padding-left width-normal
+      &:before
+        left 0

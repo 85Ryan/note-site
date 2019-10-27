@@ -11,9 +11,10 @@
   color color-default
   text-decoration none
   border-bottom none
+  @extend title-link
   &:hover
     border-bottom none
-  &:before
+  &:after
     content '#'
     position absolute
     right calc(100% + 10px)
@@ -29,24 +30,11 @@
     font none
     padding 0
     vertical-align baseline
-    line-height 20px
-  &:after
-    background color-default
-    bottom -3px
-    content ''
-    height 2px
-    left 0
-    position absolute
-    transform scaleX(0)
-    visibility hidden
-    width 100%
-    transition 0.2s 0s ease-in-out
-  &:hover:after
-    transform scaleX(1)
-    visibility visible
+    line-height width-normal
   @media mq-mobile
-    &:before
-      content ''
+    padding-left width-normal
+    &:after
+      left 0
 
 .archives
   padding-left width-normal
