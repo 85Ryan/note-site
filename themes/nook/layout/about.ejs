@@ -4,7 +4,7 @@
       <% if(theme.author_mail) { %>
       <img src="<%- gravatar(theme.author_mail, 200) %>">
       <% } else { %>
-      <img class="wechat-qrcode-img" src="<%- url_for('/default-avatar.svg') %>">
+      <img src="<%- url_for('/default-avatar.svg') %>">
       <% } %>
     </div>
     <div class="page-description">

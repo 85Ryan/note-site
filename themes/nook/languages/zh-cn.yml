@@ -38,6 +38,7 @@ post:
   contents: 目录
   back_to_top: 返回顶部
   is_helpful: 这篇文章对你有帮助吗？
+  updated: 上次更新：
 
 algolia:
   input_placeholder: 搜索文章...

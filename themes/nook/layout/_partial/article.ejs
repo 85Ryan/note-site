@@ -10,10 +10,10 @@
   </header>
   <div class="post-content" itemprop="articleBody">
     <% if( post.excerpt && index ) { %>
-      <%- post.excerpt %>
-      <a class="more-link" href="<%- url_for(post.path) %>#more"><%- __('page.more') %></a>
+    <%- post.excerpt %>
+    <a class="more-link" href="<%- url_for(post.path) %>#more"><%- __('page.more') %></a>
     <% } else { %>
-      <%- post.content %>
+    <%- post.content %>
     <% } %>
   </div>
   <div id="post-separator" class="post-separator"></div>
@@ -23,6 +23,12 @@
     <div id="post-social-icons">
       <%- partial('_post/share-links', {cache: true}) %>
       <%- partial('_post/reaction', {cache: true}) %>
+    </div>
+    <div class="post-updated">
+      <div class="post-updated-date">
+        <span><%- __('post.updated') %></span>
+        <%= post.updated.format(config.updated_format) %>
+      </div>
     </div>
   </footer>
   <% } %>

@@ -21,7 +21,6 @@
 
 .post-title
   font-size 24px
-  text-transform uppercase
   margin-bottom 0
   font-weight 600
   padding-right 30px
@@ -93,8 +92,6 @@
     @extend title-link
     &:hover
       border none
-  h1, h2, h3, h4, h5, h6
-    text-transform uppercase
   @media mq-normal
     h1::before, h2::before, h3::before, h4::before, h5::before, h6::before
       position absolute
@@ -118,13 +115,13 @@
       bottom 0.45em
     h2::before
       content 'H2'
-      bottom 0.2em
+      bottom 0.35em
     h3::before
       content 'H3'
-      bottom 0.16em
+      bottom 0.25em
     h4::before
       content 'H4'
-      bottom 0.14em
+      bottom 0.15em
     h5::before
       content 'H5'
       bottom 0.1em
@@ -157,9 +154,8 @@
   display flex
   width 100%
   flex-flow column nowrap
-  padding width-normal 0
+  padding-top width-normal
   line-height 1.6em
-  border-bottom 1px solid color-border
   a
     font-weight 600
 
@@ -209,8 +205,9 @@
 #post-social-icons
   display flex
   border-top 1px solid color-border
+  border-bottom 1px solid color-border
   margin-top width-small
-  padding-top width-normal
+  padding width-normal 0
   align-items center
   flex-flow row nowrap
 
@@ -380,6 +377,22 @@
   background-color rgb(38, 203, 124)
   .icon
     fill #fff
+
+.post-updated
+  display flex
+  flex-flow row nowrap
+  justify-content flex-start
+  align-items center
+
+.post-updated-date
+  flex auto
+  display block
+  color color-gray
+  opacity 0.5
+  font-size font-small
+  font-weight 500
+  line-height 2
+  text-transform uppercase
 
 #post-nav
   clearfix()

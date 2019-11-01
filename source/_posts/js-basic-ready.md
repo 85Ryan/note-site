@@ -4,8 +4,9 @@ url: javascript-basics-ready
 categories:
   - javascript
 tags:
-  - js
+  - JS
   - 基础
+  - JavaScript
   - 准备
   - 笔记
 date: 2019-09-28 21:35:36

@@ -38,6 +38,7 @@ post:
   contents: Contents
   back_to_top: Back to Top
   is_helpful: Was this post helpful?
+  updated: 'Last Updated: '
 
 algolia:
   input_placeholder: Seacrh Posts...

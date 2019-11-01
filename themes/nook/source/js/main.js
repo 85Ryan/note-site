@@ -84,7 +84,7 @@
     var headerHeight = $('#header').outerHeight(true);
     var tocSelector = $('#article-toc');
     var top = $(document).scrollTop();
-    var items = $('.post-content').find('h1,h2,h3,h4,h5,h6');
+    var items = $('.post-content').find('h2,h3');
     var currentId = '';
 
     if (!tocSelector) return;
