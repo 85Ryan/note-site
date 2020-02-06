@@ -1,8 +1,10 @@
 ---
-title: {{ title }}
-date: {{ date }}
+title: { { title } }
+date: { { date } }
 url:
 cover:
 categories:
 tags:
 ---
+
+## TL;DR
