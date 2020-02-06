@@ -15,8 +15,8 @@
       ) {
         $(this).addClass('current');
       }
-    } else if ($('.post-category-link').length > 0) {
-      if ($(this).attr('href') === $('.post-category-link').attr('href')) {
+    } else if ($('.post-header .post-category-link').length > 0) {
+      if ($(this).attr('href') === $('.post-header .post-category-link').attr('href')) {
         $(this).addClass('current');
       }
     }
@@ -34,8 +34,8 @@
       ) {
         $(this).addClass('current');
       }
-    } else if ($('.post-category-link').length > 0) {
-      if ($(this).attr('href') === $('.post-category-link').attr('href')) {
+    } else if ($('.post-header .post-category-link').length > 0) {
+      if ($(this).attr('href') === $('.post-header .post-category-link').attr('href')) {
         $(this).addClass('current');
       }
     }
@@ -49,8 +49,7 @@
   });
 
   // Article Toc
-
-  var footerHeight = $('#footer').outerHeight() + 50;
+  const footerHeight = $('#footer').outerHeight() + 50;
   $('#article-toc-inner').each(function() {
     $(this).css('margin-bottom', footerHeight + 'px');
   });
@@ -60,7 +59,7 @@
     $('#mb-article-toc').hide();
   }
 
-  $('#article-toc-top').click(function(e) {
+  $('#article-toc-top').click(e => {
     e.preventDefault();
     $(window).scrollTo('0', {
       duration: 600
@@ -68,9 +67,9 @@
   });
 
   $('.toc-link').click(function() {
-    var target = $($(this).attr('href'));
+    const target = $($(this).attr('href'));
     if (!target) return;
-    var targetOffset = $(target).offset().top;
+    const targetOffset = $(target).offset().top;
     $('html,body').animate(
       {
         scrollTop: targetOffset
@@ -80,12 +79,12 @@
     return false;
   });
 
-  $(window).scroll(function() {
-    var headerHeight = $('#header').outerHeight(true);
-    var tocSelector = $('#article-toc');
-    var top = $(document).scrollTop();
-    var items = $('.post-content').find('h2,h3');
-    var currentId = '';
+  $(window).scroll(() => {
+    const headerHeight = $('#header').outerHeight(true);
+    const tocSelector = $('#article-toc');
+    const top = $(document).scrollTop();
+    const items = $('.post-content').find('h2,h3');
+    let currentId = '';
 
     if (!tocSelector) return;
 
@@ -96,8 +95,8 @@
     }
 
     items.each(function() {
-      var m = $(this);
-      var itemTop = m.offset().top;
+      const m = $(this);
+      const itemTop = m.offset().top;
       if (top > itemTop - 20) {
         currentId = '#' + m.attr('id');
       } else {
@@ -105,7 +104,7 @@
       }
     });
 
-    var currentLink = tocSelector.find('.current');
+    const currentLink = tocSelector.find('.current');
 
     if (currentId) {
       if (currentLink.attr('href') !== currentId) {

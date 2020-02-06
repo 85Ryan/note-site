@@ -5,12 +5,12 @@
 
 // head title.
 hexo.extend.helper.register('head_title', function(separator) {
-  var title = '';
-  var sep = ' ' + separator + ' ';
-  var siteTitle = this.config.title;
-  var category = this.page.category;
-  var tag = this.page.tag;
-  var archive = this.page.archive;
+  let title = '';
+  const sep = ' ' + separator + ' ';
+  const siteTitle = this.config.title;
+  const category = this.page.category;
+  const tag = this.page.tag;
+  const archive = this.page.archive;
   if (this.page.title) {
     title = this.page.title + sep;
   } else {
@@ -33,11 +33,13 @@ hexo.extend.helper.register('head_title', function(separator) {
 
 // body class.
 hexo.extend.helper.register('body_class', function() {
-  var bodyClass = '';
+  let bodyClass = '';
   if (this.page.category) {
     bodyClass = this.page.category;
   } else if (this.page.layout === 'post' && this.page.categories.length) {
     bodyClass = this.page.categories.data[0].name;
+  } else if (this.page.archive) {
+    bodyClass = 'archive';
   } else {
     bodyClass = this.page.layout;
   }
@@ -45,16 +47,16 @@ hexo.extend.helper.register('body_class', function() {
 });
 
 // svg icons
-hexo.extend.helper.register('svg_icon', function(idName) {
-  var id = idName;
+hexo.extend.helper.register('svg_icon', idName => {
+  const id = idName;
   return '<SVG class="icon"><use xlink:href="#' + id + '-icon" href="#' + id + '-icon" /></SVG>';
 });
 
 // twitter share link
 hexo.extend.helper.register('twitter_share_link', function(className) {
-  var baseUrl = 'https://twitter.com/intent/tweet?url=';
-  var result = '';
-  var icon = this.svg_icon('twitter');
+  const baseUrl = 'https://twitter.com/intent/tweet?url=';
+  let result = '';
+  const icon = this.svg_icon('twitter');
 
   result =
     '<a href="' +
@@ -72,9 +74,9 @@ hexo.extend.helper.register('twitter_share_link', function(className) {
 
 // weibo share link
 hexo.extend.helper.register('weibo_share_link', function(className) {
-  var baseUrl = 'http://service.weibo.com/share/share.php?url=';
-  var result = '';
-  var icon = this.svg_icon('weibo');
+  const baseUrl = 'http://service.weibo.com/share/share.php?url=';
+  let result = '';
+  const icon = this.svg_icon('weibo');
 
   result =
     '<a href="' +
@@ -91,11 +93,11 @@ hexo.extend.helper.register('weibo_share_link', function(className) {
 });
 
 // Post Cover
-hexo.extend.helper.register('post_cover', function(post) {
-  var url = post.cover || '';
+hexo.extend.helper.register('post_cover', post => {
+  let url = post.cover || '';
   if (!url) {
-    var imgPattern = /\<img\s.*?\s?src\s*=\s*['|"]?([^\s'"]+).*?\>/gi;
-    var result = imgPattern.exec(post.content);
+    const imgPattern = /\<img\s.*?\s?src\s*=\s*['|"]?([^\s'"]+).*?\>/gi;
+    const result = imgPattern.exec(post.content);
     if (result && result.length > 1) {
       url = result[1];
     }
