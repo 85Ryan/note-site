@@ -6,5 +6,3 @@ cover:
 categories:
 tags:
 ---
-
-## TL;DR
