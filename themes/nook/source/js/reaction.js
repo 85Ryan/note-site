@@ -1,13 +1,13 @@
 (function() {
   'use strict';
 
-  var Cookies = window.Cookies.noConflict();
-  var badButton = document.getElementById('reaction-bad');
-  var notbadButton = document.getElementById('reaction-notbad');
-  var goodButton = document.getElementById('reaction-good');
+  const Cookies = window.Cookies.noConflict();
+  const badButton = document.getElementById('reaction-bad');
+  const notbadButton = document.getElementById('reaction-notbad');
+  const goodButton = document.getElementById('reaction-good');
 
-  var url = document.location.pathname;
-  var isHelpful = Cookies.get('is_helpful', { path: url });
+  const url = document.location.pathname;
+  const isHelpful = Cookies.get('is_helpful', { path: url });
 
   if (!badButton || !notbadButton || !goodButton) return;
 
@@ -19,21 +19,21 @@
     goodButton.classList.add('active');
   }
 
-  badButton.addEventListener('click', function() {
+  badButton.addEventListener('click', () => {
     Cookies.set('is_helpful', 'bad', { expires: 365, path: url });
     badButton.classList.add('active');
     notbadButton.classList.remove('active');
     goodButton.classList.remove('active');
   });
 
-  notbadButton.addEventListener('click', function() {
+  notbadButton.addEventListener('click', () => {
     Cookies.set('is_helpful', 'notbad', { expires: 365, path: url });
     badButton.classList.remove('active');
     notbadButton.classList.add('active');
     goodButton.classList.remove('active');
   });
 
-  goodButton.addEventListener('click', function() {
+  goodButton.addEventListener('click', () => {
     Cookies.set('is_helpful', 'good', { expires: 365, path: url });
     badButton.classList.remove('active');
     notbadButton.classList.remove('active');
