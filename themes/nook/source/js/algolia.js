@@ -2,10 +2,10 @@
 /* global jQuery algoliasearch instantsearch */
 
 (function($) {
-  $(document).ready(function() {
+  $(document).ready(() => {
     const algoliaConfig = document.querySelector('meta[property="algolia:search"]').dataset;
     const algoliaLabel = document.querySelector('meta[property="algolia:label"]').dataset;
-    var isAlgoliaConfigValid =
+    const isAlgoliaConfigValid =
       algoliaConfig.applicationId && algoliaConfig.apiKey && algoliaConfig.indexName;
 
     if (!isAlgoliaConfigValid) {
@@ -52,7 +52,7 @@
 
     search.start();
 
-    $('.popup-trigger').on('click', function(e) {
+    $('.popup-trigger').on('click', e => {
       e.stopPropagation();
       $('.site-search').toggle();
       $('#algolia-search-input')
@@ -60,7 +60,7 @@
         .focus();
     });
 
-    $('.popup-btn-close').click(function() {
+    $('.popup-btn-close').click(() => {
       $('.site-search').hide();
       $('body').css('overflow', '');
     });
