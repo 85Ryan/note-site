@@ -103,7 +103,10 @@ Command options are:
 - altitude：太阳高度角
 - azimuth：太阳方位角
 
-可以在这里查询具体位置的太阳方位：[https://keisan.casio.com/exec/system/1224682277](https://keisan.casio.com/exec/system/1224682277)
+可以在这里查询具体位置的太阳方位：
+
+- [https://keisan.casio.com/exec/system/1224682277](https://keisan.casio.com/exec/system/1224682277)
+- [https://www.esrl.noaa.gov/gmd/grad/solcalc/](https://www.esrl.noaa.gov/gmd/grad/solcalc/)
 
 ### 根据时间变化
 
