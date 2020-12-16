@@ -27,7 +27,7 @@ UWP（通用 Windows 平台，Universal Windows Platform）是微软在 Windows 
 HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\Windows\CurrentVersion\AppContainer\Mappings
 ```
 
-`Mappings` 目录下的一大串字符即为  对应应用的 SID 值，点击相应的 SID 即可查看应用的名称：'DisplayName`。
+`Mappings` 目录下的一大串字符即为  对应应用的 SID 值，点击相应的 SID 即可查看应用的名称：`DisplayName`。
 
 ## 解除网络隔离
 
