@@ -110,8 +110,8 @@ theme: nook
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  - type: git
-    repo: https://github.com/85Ryan/note.git
-    branch: master
+  # - type: git
+  #   repo: https://github.com/85Ryan/note.git
+  #   branch: master
   # - type: git
   #   repo: ssh://ryan@139.196.83.110:22160/home/ryan/note.git
